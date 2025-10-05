@@ -42,7 +42,7 @@ const Hero = () => {
     <section id="hero" className="min-h-screen flex items-center justify-center relative overflow-hidden">
       {/* Animated Gradient Background */}
         {/* Floating Gradient Blobs */}
-        <div className="absolute inset-0 bg-gradient-to-br from-amber-400 via-orange-500 to-rose-500 animate-gradient">
+<div className="absolute inset-0 bg-gradient-to-br from-purple-500 via-violet-600 to-indigo-700 animate-gradient">
 
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-r from-blue-400/30 to-purple-400/30 rounded-full blur-3xl animate-float"></div>
         <div className="absolute bottom-1/3 right-1/4 w-80 h-80 bg-gradient-to-r from-indigo-300/25 to-pink-300/25 rounded-full blur-3xl animate-float delay-1000"></div>
