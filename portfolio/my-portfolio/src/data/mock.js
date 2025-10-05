@@ -8,7 +8,7 @@ export const profileData = {
   phone: "+91-7992370930",
   github: "https://github.com/Arpi12345",
   portfolio: "https://dev-portfolio-209.preview.emergentagent.com",
-  cloudProfile: "https://www.cloudskillsboost.google/public_profiles/your-profile",
+  cloudProfile: "https://www.cloudskillsboost.google/public_profiles/b2b4c085-32a8-4f06-80ce-2e873ec91713",
   resume: "/resume/arpita-raj-resume.pdf"
 };
 
@@ -99,7 +99,7 @@ export const certifications = {
         description: "Data Engineering, Analytics"
       }
     ],
-    profileUrl: "https://www.cloudskillsboost.google/public_profiles/your-profile"
+    profileUrl: "https://www.cloudskillsboost.google/public_profiles/b2b4c085-32a8-4f06-80ce-2e873ec91713"
   },
   other: [
     {
