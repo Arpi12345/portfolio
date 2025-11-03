@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 🌈 Global styles and design tokens */
+:root {
+  --background: 240 10% 4%;
+  --foreground: 0 0% 100%;
+  --primary: 260 100% 70%;
+  --secondary: 180 60% 50%;
+  --accent: 300 100% 70%;
+  --muted: 240 10% 30%;
+  --card: 240 10% 10%;
+  --card-foreground: 0 0% 100%;
+  --border: 240 10% 20%;
+  --radius: 0.5rem;
+}
+
+/* 🌤 Light mode */
+@media (prefers-color-scheme: light) {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 47.4% 11.2%;
+    --primary: 240 100% 60%;
+    --secondary: 270 100% 70%;
+    --accent: 180 100% 70%;
+  }
+}
+
+/* 🌍 Base body and layout */
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #4f46e5, #9333ea);
+  color: hsl(var(--foreground));
+  font-family: 'Poppins', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+  text-rendering: optimizeLegibility;
+}
+
+/* ✨ Links */
+a {
+  font-weight: 500;
+  color: hsl(var(--accent));
+  text-decoration: none;
+}
+a:hover {
+  color: hsl(var(--foreground));
+}
+
+/* 🎯 Headings */
+h1 {
+  font-size: 3rem;
+  line-height: 1.2;
+}
+
+/* 🖱 Buttons */
+button {
+  border-radius: var(--radius);
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  background-color: hsl(var(--primary));
+  color: hsl(var(--primary-foreground, 0 0% 100%));
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+button:hover {
+  background-color: hsl(var(--accent));
+}
