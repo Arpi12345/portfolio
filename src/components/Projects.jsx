@@ -31,10 +31,10 @@ const Projects = () => {
 
   const ProjectCard = ({ project, featured = false }) => {
     const cardGradients = [
-       'from-blue-500/10 to-purple-600/10',
-      'from-indigo-500/10 to-purple-500/10', 
-      'from-purple-500/10 to-pink-500/10',
-      'from-blue-600/10 to-indigo-500/10',
+      'from-blue-500/10 to-purple-600/10',
+      'from-indigo-500/10 to-purple-600/10', 
+      'from-purple-500/10 to-pink-600/10',
+      'from-blue-600/10 to-indigo-600/10',
       'from-indigo-600/10 to-purple-600/10',
       'from-blue-500/10 to-purple-600/10',
       'from-indigo-500/10 to-purple-500/10', 
