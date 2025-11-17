@@ -23,7 +23,18 @@ export const skills = {
 
 export const projects = [
   {
+    
     id: 1,
+  title: "Zerodha Clone",
+  description: "A full-stack stock trading clone app with user authentication, dashboard, and data visualization using React and Node.js.",
+  techStack: ["React.js", "Node.js", "MongoDB", "Express.js", "Tailwind CSS"],
+  github: "https://github.com/Arpi12345/Zerodha",
+  live: "https://zerodha-frontend-ljn4.onrender.com",
+  featured: true
+  },
+  {
+   
+     id: 2,
     title: "Wanderlust – Travel Listing Web App",
     description: "A comprehensive travel listing platform with CRUD operations, user authentication, and responsive design. Users can browse, create, and manage travel listings.",
     techStack: ["React.js", "Node.js", "MongoDB", "Express.js", "Tailwind CSS"],
@@ -32,38 +43,61 @@ export const projects = [
     featured: true
   },
   {
-    id: 2,
+     id: 3,
+  title: "Weather App",
+  description: "A real-time weather forecasting web app that fetches live data using OpenWeather API, displaying temperature, humidity, and conditions with a clean, responsive UI.",
+  techStack: ["HTML", "CSS", "JavaScript", "OpenWeather API"],
+  github: "https://github.com/Arpi12345/weather-app",
+  live: "https://weather-app-hvyj.onrender.com/",
+  featured: true
+  },
+    {
+    id: 4,
+    title: "ImageFinder App",
+    description:
+      "A full-stack image search engine using Unsplash API with features like Google OAuth login, saving favorite images, search history, and a clean, responsive UI. Integrated with MongoDB sessions on Render.",
+    techStack: ["React.js", "Node.js", "Express.js", "MongoDB", "Unsplash API", "Passport.js"],
+    github: "https://github.com/Arpi12345/Image",
+    live: "https://image-n5rk.onrender.com",
+    featured: true
+  },
+ {
+   id: 5,
     title: "Spotify Clone",
     description: "A responsive music player interface replicating Spotify's design and functionality with clean UI and smooth user experience.",
     techStack: ["HTML", "CSS", "JavaScript"],
-    github: "https://github.com/Arpi12345/spotify-clone",
+    github: "https://github.com/Arpi12345/Spotify-clone1",
     live: null,
-    featured: true
-  },
+     featured: true
+ 
+}
+,
   {
-    id: 3,
+     id: 6,
     title: "Quora Clone",
     description: "A Q&A platform clone with routing, forms, and backend logic. Features include user posts, questions, and answers functionality.",
     techStack: ["React.js", "Node.js", "MongoDB", "Express.js"],
     github: "https://github.com/Arpi12345/quora-clone",
     live: null,
     featured: true
-  },
+ 
+},
+
   {
-    id: 4,
-    title: "Delta Projects",
-    description: "Collection of web development projects showcasing various frontend and backend technologies.",
-    techStack: ["HTML", "CSS", "JavaScript", "React.js"],
-    github: "https://github.com/Arpi12345/delta-project",
-    live: null,
-    featured: false
-  },
-  {
-    id: 5,
+    id: 7,
     title: "Mini Project (CSS Showcase)",
     description: "A creative CSS project demonstrating advanced styling techniques and responsive design principles.",
     techStack: ["HTML", "CSS"],
     github: "https://github.com/Arpi12345/Mini-project-css",
+    live: null,
+    featured: false
+  },
+  {
+    id: 8,
+    title: "Delta Projects",
+    description: "Collection of web development projects showcasing various frontend and backend technologies.",
+    techStack: ["HTML", "CSS", "JavaScript", "React.js"],
+    github: "https://github.com/Arpi12345/delta-project",
     live: null,
     featured: false
   }

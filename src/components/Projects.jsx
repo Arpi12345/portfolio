@@ -19,20 +19,28 @@ const Projects = () => {
   };
 
   const projectImages = {
-    1: 'https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=600&h=300&fit=crop',
-    2: 'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=600&h=300&fit=crop', 
-    3: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=600&h=300&fit=crop',
-    4: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=600&h=300&fit=crop',
-    5: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=300&fit=crop'
+    1: 'https://media.istockphoto.com/id/1311598658/photo/businessman-trading-online-stock-market-on-teblet-screen-digital-investment-concept.jpg?s=2048x2048&w=is&k=20&c=YSjDgQRHhi-kPn3GpowGFLPB8jEJN8SFrp2rpBFUD58=',
+    2: 'https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=600&h=300&fit=crop',
+    3:'https://images.unsplash.com/photo-1530563885674-66db50a1af19?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    4:'Image.png',
+    5: 'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=600&h=300&fit=crop',
+    6:'https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    7: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=300&fit=crop',
+    8:'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=600&h=300&fit=crop'
   };
 
   const ProjectCard = ({ project, featured = false }) => {
     const cardGradients = [
-      'from-blue-500/10 to-purple-600/10',
+       'from-blue-500/10 to-purple-600/10',
       'from-indigo-500/10 to-purple-500/10', 
       'from-purple-500/10 to-pink-500/10',
       'from-blue-600/10 to-indigo-500/10',
-      'from-indigo-600/10 to-purple-600/10'
+      'from-indigo-600/10 to-purple-600/10',
+      'from-blue-500/10 to-purple-600/10',
+      'from-indigo-500/10 to-purple-500/10', 
+      'from-purple-500/10 to-pink-500/10',
+      
+
     ];
     
     const borderGradients = [
@@ -40,7 +48,13 @@ const Projects = () => {
       'from-indigo-500 to-purple-600',
       'from-purple-600 to-pink-500', 
       'from-blue-600 to-indigo-500',
-      'from-indigo-600 to-purple-600'
+      'from-indigo-600 to-purple-600',
+        'from-blue-500 to-purple-600',
+      'from-indigo-500 to-purple-600',
+      'from-purple-600 to-pink-500', 
+      
+
+      
     ];
     
     const cardIndex = (project.id - 1) % cardGradients.length;
@@ -108,9 +122,9 @@ const Projects = () => {
                     {tech}
                   </span>
                 ))}
-                {project.techStack.length > 4 && (
+                {project.techStack.length > 6 && (
                   <span className="text-sm text-gray-500 font-medium px-2 py-1">
-                    +{project.techStack.length - 4} more
+                    +{project.techStack.length - 6} more
                   </span>
                 )}
               </div>

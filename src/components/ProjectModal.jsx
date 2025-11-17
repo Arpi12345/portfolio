@@ -8,50 +8,155 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
   if (!project) return null;
 
   const projectImages = {
-    1: 'https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=800&h=400&fit=crop', // Travel/landscape
-    2: 'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=800&h=400&fit=crop', // Music/headphones
-    3: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&h=400&fit=crop', // Q&A/discussion
-    4: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=800&h=400&fit=crop', // Code/development
-    5: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=400&fit=crop'  // CSS/design
+    1: 'https://media.istockphoto.com/id/1311598658/photo/businessman-trading-online-stock-market-on-teblet-screen-digital-investment-concept.jpg?s=2048x2048&w=is&k=20&c=YSjDgQRHhi-kPn3GpowGFLPB8jEJN8SFrp2rpBFUD58=',
+    2: 'https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=800&h=400&fit=crop',
+    3: 'https://images.unsplash.com/photo-1530563885674-66db50a1af19?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    4:'Image.png',
+    5: 'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=600&h=300&fit=crop',
+    6:'https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    7: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=300&fit=crop',
+    8:'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=600&h=300&fit=crop',
   };
 
-  const projectDetails = {
-    1: {
-      duration: '3 months',
-      team: 'Solo Project',
-      highlights: ['User Authentication', 'CRUD Operations', 'Responsive Design', 'Image Upload', 'Search & Filter'],
-      challenges: 'Implemented secure authentication and optimized database queries for better performance.',
-      learnings: 'Gained deep understanding of full-stack development and deployment strategies.'
-    },
-    2: {
-      duration: '2 months',
-      team: 'Solo Project', 
-      highlights: ['Music Player UI', 'Responsive Layout', 'Interactive Controls', 'Modern Design', 'Cross-browser Support'],
-      challenges: 'Creating pixel-perfect UI that matches Spotify\'s design while ensuring responsiveness.',
-      learnings: 'Enhanced CSS skills and learned advanced layout techniques.'
-    },
-    3: {
-      duration: '2.5 months',
-      team: 'Solo Project',
-      highlights: ['Q&A Platform', 'User Posts', 'Routing System', 'Form Handling', 'Backend Logic'],
-      challenges: 'Building a scalable backend architecture for handling user-generated content.',
-      learnings: 'Mastered React Router and backend API development.'
-    },
-    4: {
-      duration: '1 month',
-      team: 'Solo Project',
-      highlights: ['Multiple Projects', 'Various Technologies', 'Learning Exercises', 'Code Examples'],
-      challenges: 'Organizing and structuring multiple small projects effectively.',
-      learnings: 'Improved project management and code organization skills.'
-    },
-    5: {
-      duration: '2 weeks',
-      team: 'Solo Project',
-      highlights: ['Advanced CSS', 'Animations', 'Modern Layout', 'Creative Design', 'Showcase Project'],
-      challenges: 'Implementing complex CSS animations and modern design patterns.',
-      learnings: 'Advanced CSS techniques including Grid, Flexbox, and animations.'
-    }
-  };
+
+  
+
+ const projectDetails = {
+  1: {
+    duration: "3 weeks",
+    team: "Solo Project",
+    highlights: [
+      "Real-time stock chart simulation using Chart.js",
+      "Zerodha-style trading dashboard UI",
+      "Watchlist with add/remove functionality",
+      "Portfolio panel with profit/loss calculations",
+      "Highly responsive professional layout",
+      "Smooth transitions and micro-interactions"
+    ],
+    challenges:
+      "Providing smooth chart updates with simulated real-time data and building a clean Zerodha-inspired UI from scratch.",
+    learnings:
+      "Deepened knowledge of data visualization, React optimization, chart integrations, and scalable dashboard architecture."
+  },
+
+  2: {
+    duration: "2 months",
+    team: "Solo Project",
+    highlights: [
+      "Accommodation listing platform inspired by Airbnb UI",
+      "Fully responsive grid layout for villas & stays",
+      "Category-based filtering (Trending, Rooms, Cities, Mountains, Castles, Pools)",
+      "Advanced search bar with live destination lookup",
+      "Dynamic pricing display on listing cards",
+      "Modern card-based UI with high-quality images",
+      "Filter drawer with detailed options",
+      "Smooth navigation and clean user experience",
+      "Footer with brand identity and page links"
+    ],
+    challenges:
+      "Building a visually rich, fully responsive layout with dynamic filters and search functionality while keeping the UI clean and modern.",
+    learnings:
+      "Mastered component reuse, dynamic filtering logic, scalable folder structure, and building pixel-perfect UI layouts."
+  },
+
+  3: {
+    duration: "1 month",
+    team: "Solo Project",
+    highlights: [
+      "Real-time weather data using OpenWeather API",
+      "Dynamic temperature, humidity, wind & condition updates",
+      "Location-based weather detection with Geolocation API",
+      "Animated and responsive interface",
+      "City-based weather search",
+      "Dynamic weather backgrounds and icons"
+    ],
+    challenges:
+      "Handling inconsistent API responses, loading states, and building weather-based dynamic UI layouts.",
+    learnings:
+      "Mastered API integration, state management in React, async handling, and creating dynamic UI components."
+  },
+
+  4: {
+    duration: "1.5 months",
+    team: "Solo Project",
+    highlights: [
+      "Google OAuth + manual login/signup",
+      "Unsplash API integration for real-time image search",
+      "Users can save and manage favorite photos",
+      "Responsive modern pink-themed UI",
+      "Trending tags with instant click search",
+      "Backend sessions & cookies fully functional on Render"
+    ],
+    challenges:
+      "Handling Google OAuth redirect URLs, backend deployment, session cookies, and CORS issues in production.",
+    learnings:
+      "Gained expertise in authentication flows, secure session handling, full-stack deployment, and API-heavy UI building."
+  },
+
+  5: {
+    duration: "2 months",
+    team: "Solo Project",
+    highlights: [
+      "Music Player UI",
+      "Responsive layout",
+      "Interactive playback controls",
+      "Modern and clean design",
+      "Cross-browser compatibility"
+    ],
+    challenges:
+      "Building a pixel-perfect UI that closely matches Spotify’s design while keeping the layout fully responsive.",
+    learnings: "Improved CSS mastery and advanced layout techniques."
+  },
+
+  6: {
+    duration: "2.5 months",
+    team: "Solo Project",
+    highlights: [
+      "Q&A Platform",
+      "User Posts & Comments",
+      "Custom Routing System",
+      "Form Handling",
+      "Backend API Logic"
+    ],
+    challenges:
+      "Developing a scalable backend architecture to handle user-generated content efficiently.",
+    learnings:
+      "Mastered React Router, backend API creation, and full CRUD operations."
+  },
+
+  7: {
+    duration: "2 weeks",
+    team: "Solo Project",
+    highlights: [
+      "Advanced CSS animations",
+      "Modern UI layout",
+      "Creative and interactive design",
+      "Fully responsive",
+      "Showcase-level project"
+    ],
+    challenges:
+      "Implementing complex CSS animations step-by-step and ensuring compatibility across devices.",
+    learnings:
+      "Polished skills in Flexbox, Grid, keyframe animation, and modern layout patterns."
+  },
+
+  8: {
+    duration: "1 month",
+    team: "Solo Project",
+    highlights: [
+      "Collection of multiple small projects",
+      "Practiced various frontend technologies",
+      "UI components & reusable patterns",
+      "Logic-building exercises",
+      "Clean folder structure"
+    ],
+    challenges:
+      "Organizing multiple independent projects while keeping the structure maintainable.",
+    learnings:
+      "Improved project management, structuring, and modular code development."
+  }
+};
+
 
   const details = projectDetails[project.id] || projectDetails[1];
 
@@ -138,7 +243,6 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
 
             {/* Right Column */}
             <div className="space-y-6">
-              {/* Key Highlights */}
               <div>
                 <h3 className="text-xl font-bold text-gray-800 mb-4">Key Features</h3>
                 <ul className="space-y-2">
