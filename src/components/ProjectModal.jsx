@@ -8,14 +8,15 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
   if (!project) return null;
 
   const projectImages = {
-    1: 'https://media.istockphoto.com/id/1311598658/photo/businessman-trading-online-stock-market-on-teblet-screen-digital-investment-concept.jpg?s=2048x2048&w=is&k=20&c=YSjDgQRHhi-kPn3GpowGFLPB8jEJN8SFrp2rpBFUD58=',
-    2: 'https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=800&h=400&fit=crop',
-    3: 'https://images.unsplash.com/photo-1530563885674-66db50a1af19?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    4:'Image.png',
-    5: 'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=600&h=300&fit=crop',
-    6:'https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    7: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=300&fit=crop',
-    8:'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=600&h=300&fit=crop',
+    1: 'https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04?w=600&h=300&fit=crop',
+    2: 'https://media.istockphoto.com/id/1311598658/photo/businessman-trading-online-stock-market-on-teblet-screen-digital-investment-concept.jpg?s=2048x2048&w=is&k=20&c=YSjDgQRHhi-kPn3GpowGFLPB8jEJN8SFrp2rpBFUD58=',
+    3: 'https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=800&h=400&fit=crop',
+    4: 'https://images.unsplash.com/photo-1530563885674-66db50a1af19?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    5:'Image.png',
+    6: 'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=600&h=300&fit=crop',
+    7:'https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    8: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=300&fit=crop',
+    9:'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=600&h=300&fit=crop',
   };
 
 
@@ -23,6 +24,28 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
 
  const projectDetails = {
   1: {
+  duration: "1.5 months",
+  team: "Solo Project",
+  highlights: [
+    "Real-time video conferencing using WebRTC",
+    "Socket.io signaling server",
+    "Meeting room creation and join system",
+    "Live chat during video calls",
+    "Screen sharing support",
+    "Meeting history stored in MongoDB Atlas",
+    "Secure authentication system",
+    "Full MERN stack cloud deployment on Render"
+  ],
+  challenges:
+    "Implementing stable real-time peer-to-peer communication using WebRTC and managing Socket.io signaling in production.",
+  learnings:
+    "Learned WebRTC architecture, Socket.io signaling, real-time systems, and production deployment."
+},
+
+
+
+
+  2: {
     duration: "3 weeks",
     team: "Solo Project",
     highlights: [
@@ -39,7 +62,7 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
       "Deepened knowledge of data visualization, React optimization, chart integrations, and scalable dashboard architecture."
   },
 
-  2: {
+  3: {
     duration: "2 months",
     team: "Solo Project",
     highlights: [
@@ -59,7 +82,7 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
       "Mastered component reuse, dynamic filtering logic, scalable folder structure, and building pixel-perfect UI layouts."
   },
 
-  3: {
+  4: {
     duration: "1 month",
     team: "Solo Project",
     highlights: [
@@ -76,7 +99,7 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
       "Mastered API integration, state management in React, async handling, and creating dynamic UI components."
   },
 
-  4: {
+  5: {
     duration: "1.5 months",
     team: "Solo Project",
     highlights: [
@@ -93,7 +116,7 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
       "Gained expertise in authentication flows, secure session handling, full-stack deployment, and API-heavy UI building."
   },
 
-  5: {
+  6: {
     duration: "2 months",
     team: "Solo Project",
     highlights: [
@@ -108,7 +131,7 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
     learnings: "Improved CSS mastery and advanced layout techniques."
   },
 
-  6: {
+  7: {
     duration: "2.5 months",
     team: "Solo Project",
     highlights: [
@@ -124,7 +147,7 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
       "Mastered React Router, backend API creation, and full CRUD operations."
   },
 
-  7: {
+  8: {
     duration: "2 weeks",
     team: "Solo Project",
     highlights: [
@@ -140,7 +163,7 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
       "Polished skills in Flexbox, Grid, keyframe animation, and modern layout patterns."
   },
 
-  8: {
+  9: {
     duration: "1 month",
     team: "Solo Project",
     highlights: [
