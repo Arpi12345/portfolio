@@ -215,7 +215,7 @@ const Projects = () => {
                 <ProjectCard 
                   key={project.id} 
                   project={project} 
-                  featured={index === 0}
+                 featured={project.id === 1 || project.id === 2}
                 />
               ))}
             </div>
