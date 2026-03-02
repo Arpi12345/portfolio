@@ -1,17 +1,24 @@
-import React, { useState } from 'react';
-import { Card, CardContent } from './ui/card';
-import { Button } from './ui/button';
-import { Badge } from './ui/badge';
-import { Github, ExternalLink, Star, Rocket, Eye, ArrowRight } from 'lucide-react';
-import { projects } from '../data/mock';
-import ProjectModal from './ProjectModal';
+import React, { useState } from "react";
+import { Card, CardContent } from "./ui/card";
+import { Button } from "./ui/button";
+import { Badge } from "./ui/badge";
+import {
+  Github,
+  ExternalLink,
+  Star,
+  Rocket,
+  Eye,
+  ArrowRight,
+} from "lucide-react";
+import { projects } from "../data/mock";
+import ProjectModal from "./ProjectModal";
 
 const Projects = () => {
   const [selectedProject, setSelectedProject] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const featuredProjects = projects.filter(project => project.featured);
-  const otherProjects = projects.filter(project => !project.featured);
+  const featuredProjects = projects.filter((project) => project.featured);
+  const otherProjects = projects.filter((project) => !project.featured);
 
   const openProjectModal = (project) => {
     setSelectedProject(project);
@@ -19,76 +26,73 @@ const Projects = () => {
   };
 
   const projectImages = {
-    1:'https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04?w=600&h=300&fit=crop',
-    2: 'https://media.istockphoto.com/id/1311598658/photo/businessman-trading-online-stock-market-on-teblet-screen-digital-investment-concept.jpg?s=2048x2048&w=is&k=20&c=YSjDgQRHhi-kPn3GpowGFLPB8jEJN8SFrp2rpBFUD58=',
-    3: 'https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=600&h=300&fit=crop',
-    4:'https://images.unsplash.com/photo-1530563885674-66db50a1af19?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    5:'Image.png',
-    6: 'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=600&h=300&fit=crop',
-    7:'https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    8: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=300&fit=crop',
-    9:'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=600&h=300&fit=crop'
+    1: "https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04?w=600&h=300&fit=crop",
+    2: "https://media.istockphoto.com/id/1311598658/photo/businessman-trading-online-stock-market-on-teblet-screen-digital-investment-concept.jpg?s=2048x2048&w=is&k=20&c=YSjDgQRHhi-kPn3GpowGFLPB8jEJN8SFrp2rpBFUD58=",
+    3: "https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=600&h=300&fit=crop",
+    4: "https://images.unsplash.com/photo-1530563885674-66db50a1af19?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    5: "Image.png",
+    6: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=600&h=300&fit=crop",
+    7: "https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    8: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=300&fit=crop",
+    9: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=600&h=300&fit=crop",
   };
 
   const ProjectCard = ({ project, featured = false }) => {
     const cardGradients = [
-      'from-blue-500/10 to-purple-600/10',
-      'from-blue-500/10 to-purple-600/10',
-      'from-indigo-500/10 to-purple-600/10', 
-      'from-purple-500/10 to-pink-600/10',
-      'from-blue-600/10 to-indigo-600/10',
-      'from-indigo-600/10 to-purple-600/10',
-      'from-blue-500/10 to-purple-600/10',
-      'from-indigo-500/10 to-purple-500/10', 
-      'from-purple-500/10 to-pink-500/10',
-      
-
+      "from-blue-500/10 to-purple-600/10",
+      "from-blue-500/10 to-purple-600/10",
+      "from-indigo-500/10 to-purple-600/10",
+      "from-purple-500/10 to-pink-600/10",
+      "from-blue-600/10 to-indigo-600/10",
+      "from-indigo-600/10 to-purple-600/10",
+      "from-blue-500/10 to-purple-600/10",
+      "from-indigo-500/10 to-purple-500/10",
+      "from-purple-500/10 to-pink-500/10",
     ];
-    
+
     const borderGradients = [
-      'from-blue-500 to-purple-600',
-      'from-blue-500 to-purple-600',
-      'from-indigo-500 to-purple-600',
-      'from-purple-600 to-pink-500', 
-      'from-blue-600 to-indigo-500',
-      'from-indigo-600 to-purple-600',
-        'from-blue-500 to-purple-600',
-      'from-indigo-500 to-purple-600',
-      'from-purple-600 to-pink-500', 
-      
-
-      
+      "from-blue-500 to-purple-600",
+      "from-blue-500 to-purple-600",
+      "from-indigo-500 to-purple-600",
+      "from-purple-600 to-pink-500",
+      "from-blue-600 to-indigo-500",
+      "from-indigo-600 to-purple-600",
+      "from-blue-500 to-purple-600",
+      "from-indigo-500 to-purple-600",
+      "from-purple-600 to-pink-500",
     ];
-    
+
     const cardIndex = (project.id - 1) % cardGradients.length;
-    
+
     return (
-      <Card className={`group hover:shadow-2xl transition-all duration-500 hover:-translate-y-6 border-0 bg-white overflow-hidden relative cursor-pointer ${featured ? 'lg:col-span-2' : ''} `}>
+      <Card
+        className={`group hover:shadow-2xl transition-all duration-500 hover:-translate-y-6 border-0 bg-white overflow-hidden relative cursor-pointer  ${featured ? "lg:col-span-2" : ""}
+  ${(project.id === 1 || project.id === 2) ? "lg:max-w-4xl lg:mx-auto" : ""}
+   `}
+      >
         {/* Hover Glow Effect */}
-        <div className={`absolute inset-0 bg-gradient-to-r ${borderGradients[cardIndex]} opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-0.5 rounded-lg`}>
+        <div
+          className={`absolute inset-0 bg-gradient-to-r ${borderGradients[cardIndex]} opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-0.5 rounded-lg`}
+        >
           <div className="w-full h-full bg-white rounded-lg"></div>
         </div>
-        
-        <div
-  className={`relative z-10 bg-white m-0.5 rounded-lg overflow-hidden
-  ${(project.id === 1 || project.id === 2)
-    ? 'max-w-4xl mx-auto w-full'
-    : ''
-  }
-  `}
->
+
+        <div></div>
+        <div className="relative z-10 bg-white m-0.5 rounded-lg overflow-hidden">
           {/* Project Thumbnail */}
           <div className="relative h-48 overflow-hidden">
-            <img 
-              src={projectImages[project.id] || projectImages[1]} 
+            <img
+              src={projectImages[project.id] || projectImages[1]}
               alt={project.title}
               className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
             />
-            <div className={`absolute inset-0 bg-gradient-to-t ${cardGradients[cardIndex]} group-hover:from-transparent transition-all duration-300`}></div>
-            
+            <div
+              className={`absolute inset-0 bg-gradient-to-t ${cardGradients[cardIndex]} group-hover:from-transparent transition-all duration-300`}
+            ></div>
+
             {/* Overlay Content */}
             <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-              <Button 
+              <Button
                 onClick={() => openProjectModal(project)}
                 className="bg-white/90 text-gray-800 hover:bg-white font-semibold px-6 py-3 rounded-xl backdrop-blur-sm transform scale-95 group-hover:scale-100 transition-all duration-300"
               >
@@ -96,7 +100,7 @@ const Projects = () => {
                 View Details
               </Button>
             </div>
-            
+
             {/* Featured Badge */}
             {featured && (
               <div className="absolute top-4 right-4">
@@ -111,11 +115,13 @@ const Projects = () => {
           <CardContent className="p-6">
             {/* Project Title */}
             <div className="flex items-start justify-between mb-4">
-              <h3 className={`font-bold text-gray-800 group-hover:text-indigo-600 transition-colors duration-200 ${featured ? 'text-2xl' : 'text-xl'}`}>
+              <h3
+                className={`font-bold text-gray-800 group-hover:text-indigo-600 transition-colors duration-200 ${featured ? "text-2xl" : "text-xl"}`}
+              >
                 {project.title}
               </h3>
             </div>
-            
+
             {/* Description */}
             <p className="text-gray-600 leading-relaxed mb-6 font-medium">
               {project.description}
@@ -125,10 +131,7 @@ const Projects = () => {
             <div className="mb-6">
               <div className="flex flex-wrap gap-2">
                 {project.techStack.slice(0, 4).map((tech, index) => (
-                  <span 
-                    key={tech}
-                    className="skill-pill text-sm"
-                  >
+                  <span key={tech} className="skill-pill text-sm">
                     {tech}
                   </span>
                 ))}
@@ -142,33 +145,33 @@ const Projects = () => {
 
             {/* Action Buttons */}
             <div className="flex gap-3">
-              <Button 
-                variant="outline" 
+              <Button
+                variant="outline"
                 size="sm"
                 className="border-2 border-indigo-500 text-indigo-600 hover:bg-indigo-500 hover:text-white transition-all duration-300 flex-1 font-semibold"
                 onClick={(e) => {
                   e.stopPropagation();
-                  window.open(project.github, '_blank');
+                  window.open(project.github, "_blank");
                 }}
               >
                 <Github className="w-4 h-4 mr-2" />
                 GitHub
               </Button>
-              
+
               {project.live ? (
-                <Button 
+                <Button
                   size="sm"
                   className={`bg-gradient-to-r ${borderGradients[cardIndex]} hover:from-purple-600 hover:to-pink-500 text-white transition-all duration-300 flex-1 font-semibold`}
                   onClick={(e) => {
                     e.stopPropagation();
-                    window.open(project.live, '_blank');
+                    window.open(project.live, "_blank");
                   }}
                 >
                   <ExternalLink className="w-4 h-4 mr-2" />
                   Live Demo
                 </Button>
               ) : (
-                <Button 
+                <Button
                   size="sm"
                   className="bg-gradient-to-r from-gray-500 to-gray-600 text-white flex-1 font-semibold"
                   onClick={() => openProjectModal(project)}
@@ -186,7 +189,10 @@ const Projects = () => {
 
   return (
     <>
-      <section id="projects" className="py-24 bg-gradient-to-b from-indigo-50 to-white relative overflow-hidden">
+      <section
+        id="projects"
+        className="py-24 bg-gradient-to-b from-indigo-50 to-white relative overflow-hidden"
+      >
         {/* Background Elements */}
         <div className="absolute inset-0 opacity-5">
           <div className="absolute top-20 left-20 w-40 h-40 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full blur-2xl animate-float"></div>
@@ -205,7 +211,9 @@ const Projects = () => {
               </h2>
             </div>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto font-medium">
-              Interactive showcase of my development projects. Click on any project to explore detailed information, challenges, and learnings.
+              Interactive showcase of my development projects. Click on any
+              project to explore detailed information, challenges, and
+              learnings.
             </p>
           </div>
 
@@ -219,10 +227,10 @@ const Projects = () => {
             </div>
             <div className="grid grid-cols-1 lg:grid-cols-2  gap-8">
               {featuredProjects.map((project, index) => (
-                <ProjectCard 
-                  key={project.id} 
-                  project={project} 
-                 featured={project.id === 1 || project.id === 2}
+                <ProjectCard
+                  key={project.id}
+                  project={project}
+                  featured={project.id === 1 || project.id === 2}
                 />
               ))}
             </div>
@@ -258,9 +266,11 @@ const Projects = () => {
                   Explore More Projects on GitHub
                 </p>
               </div>
-              <Button 
+              <Button
                 className="border-2 border-indigo-500 text-indigo-600 hover:bg-gradient-to-r hover:from-indigo-500 hover:to-purple-600 hover:text-white hover:border-transparent px-10 py-4 text-xl font-bold rounded-2xl transition-all duration-300 hover:scale-110 glow-effect"
-                onClick={() => window.open('https://github.com/Arpi12345', '_blank')}
+                onClick={() =>
+                  window.open("https://github.com/Arpi12345", "_blank")
+                }
               >
                 <Github className="w-6 h-6 mr-3" />
                 View GitHub Profile
@@ -271,7 +281,7 @@ const Projects = () => {
       </section>
 
       {/* Project Modal */}
-      <ProjectModal 
+      <ProjectModal
         project={selectedProject}
         isOpen={isModalOpen}
         onClose={() => setIsModalOpen(false)}
