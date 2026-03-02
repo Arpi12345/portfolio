@@ -210,7 +210,7 @@ const Projects = () => {
                 Highlighted Projects
               </h3>
             </div>
-            <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 lg:grid-cols-2  gap-8">
               {featuredProjects.map((project, index) => (
                 <ProjectCard 
                   key={project.id} 
