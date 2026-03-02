@@ -186,7 +186,7 @@ const Projects = () => {
           <div className="absolute bottom-32 right-32 w-56 h-56 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-full blur-2xl animate-float delay-1000"></div>
         </div>
 
-        <div className="max-w-7xl mx-auto px-6 relative z-10">
+        <div className="max-w-6xl mx-auto px-6 relative z-10">
           {/* Section Header */}
           <div className="text-center mb-16">
             <div className="inline-flex items-center gap-4 mb-6">
