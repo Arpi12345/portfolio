@@ -63,13 +63,20 @@ const Projects = () => {
     const cardIndex = (project.id - 1) % cardGradients.length;
     
     return (
-      <Card className={`group hover:shadow-2xl transition-all duration-500 hover:-translate-y-6 border-0 bg-white overflow-hidden relative cursor-pointer ${featured ? 'lg:col-span-2' : ''}`}>
+      <Card className={`group hover:shadow-2xl transition-all duration-500 hover:-translate-y-6 border-0 bg-white overflow-hidden relative cursor-pointer ${featured ? 'lg:col-span-2' : ''} `}>
         {/* Hover Glow Effect */}
         <div className={`absolute inset-0 bg-gradient-to-r ${borderGradients[cardIndex]} opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-0.5 rounded-lg`}>
           <div className="w-full h-full bg-white rounded-lg"></div>
         </div>
         
-        <div className="relative z-10 bg-white m-0.5 rounded-lg overflow-hidden">
+        <div
+  className={`relative z-10 bg-white m-0.5 rounded-lg overflow-hidden
+  ${(project.id === 1 || project.id === 2)
+    ? 'max-w-4xl mx-auto w-full'
+    : ''
+  }
+  `}
+>
           {/* Project Thumbnail */}
           <div className="relative h-48 overflow-hidden">
             <img 
@@ -215,7 +222,7 @@ const Projects = () => {
                 <ProjectCard 
                   key={project.id} 
                   project={project} 
-                 featured={project.id === 1 ? 'lg:col-span-2 max-w-4xl mx-auto':"" || project.id === 2? 'lg:col-span-2 max-w-4xl mx-auto':""}
+                 featured={project.id === 1 || project.id === 2}
                 />
               ))}
             </div>
