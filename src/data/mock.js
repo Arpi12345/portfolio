@@ -23,8 +23,31 @@ export const skills = {
 
 export const projects = [
   {
+  id: 1,
+  title: "Apna Video Call Project",
+  description:
+    "A full-stack real-time video conferencing application built using WebRTC and Socket.io. Users can create and join meeting rooms, enable video/audio, chat live, share screen, and view meeting history. Fully deployed using MERN stack and Render cloud platform.",
+
+  techStack: [
+    "React.js",
+    "Node.js",
+    "Express.js",
+    "MongoDB",
+    "Socket.io",
+    "WebRTC",
+    "Material UI",
+    "Render"
+  ],
+
+  github: "https://github.com/Arpi12345/apnaVideoCall",
+
+  live: "https://apnavideocallfrontend-4dtx.onrender.com",
+
+  featured: true
+},
+  {
     
-    id: 1,
+    id: 2,
   title: "Zerodha Clone",
   description: "A full-stack stock trading clone app with user authentication, dashboard, and data visualization using React and Node.js.",
   techStack: ["React.js", "Node.js", "MongoDB", "Express.js", "Tailwind CSS"],
@@ -34,7 +57,7 @@ export const projects = [
   },
   {
    
-     id: 2,
+     id: 3,
     title: "Wanderlust – Travel Listing Web App",
     description: "A comprehensive travel listing platform with CRUD operations, user authentication, and responsive design. Users can browse, create, and manage travel listings.",
     techStack: ["React.js", "Node.js", "MongoDB", "Express.js", "Tailwind CSS"],
@@ -43,7 +66,7 @@ export const projects = [
     featured: true
   },
   {
-     id: 3,
+     id: 4,
   title: "Weather App",
   description: "A real-time weather forecasting web app that fetches live data using OpenWeather API, displaying temperature, humidity, and conditions with a clean, responsive UI.",
   techStack: ["HTML", "CSS", "JavaScript", "OpenWeather API"],
@@ -52,7 +75,7 @@ export const projects = [
   featured: true
   },
     {
-    id: 4,
+    id: 5,
     title: "ImageFinder App",
     description:
       "A full-stack image search engine using Unsplash API with features like Google OAuth login, saving favorite images, search history, and a clean, responsive UI. Integrated with MongoDB sessions on Render.",
@@ -62,7 +85,7 @@ export const projects = [
     featured: true
   },
  {
-   id: 5,
+   id: 6,
     title: "Spotify Clone",
     description: "A responsive music player interface replicating Spotify's design and functionality with clean UI and smooth user experience.",
     techStack: ["HTML", "CSS", "JavaScript"],
@@ -73,7 +96,7 @@ export const projects = [
 }
 ,
   {
-     id: 6,
+     id: 7,
     title: "Quora Clone",
     description: "A Q&A platform clone with routing, forms, and backend logic. Features include user posts, questions, and answers functionality.",
     techStack: ["React.js", "Node.js", "MongoDB", "Express.js"],
@@ -84,7 +107,7 @@ export const projects = [
 },
 
   {
-    id: 7,
+    id: 8,
     title: "Mini Project (CSS Showcase)",
     description: "A creative CSS project demonstrating advanced styling techniques and responsive design principles.",
     techStack: ["HTML", "CSS"],
@@ -93,7 +116,7 @@ export const projects = [
     featured: false
   },
   {
-    id: 8,
+    id: 9,
     title: "Delta Projects",
     description: "Collection of web development projects showcasing various frontend and backend technologies.",
     techStack: ["HTML", "CSS", "JavaScript", "React.js"],
