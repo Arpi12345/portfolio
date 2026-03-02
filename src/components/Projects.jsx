@@ -215,7 +215,7 @@ const Projects = () => {
                 <ProjectCard 
                   key={project.id} 
                   project={project} 
-                 featured={project.id === 1 || project.id === 2}
+                 featured={project.id === 1 ? 'lg:col-span-2 max-w-4xl mx-auto':"" || project.id === 2? 'lg:col-span-2 max-w-4xl mx-auto':""}
                 />
               ))}
             </div>
