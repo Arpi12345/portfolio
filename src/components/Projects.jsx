@@ -65,7 +65,7 @@ const Projects = () => {
     const cardIndex = (project.id - 1) % cardGradients.length;
 
     return (
-      <Card
+     <Card
         className={`group hover:shadow-2xl transition-all duration-500 hover:-translate-y-6 border-0 bg-white overflow-hidden relative cursor-pointer  ${featured ? "lg:col-span-2" : ""}
   ${(project.id === 1 || project.id === 2) ? "lg:max-w-5xl lg:mx-auto" : ""}
    `}

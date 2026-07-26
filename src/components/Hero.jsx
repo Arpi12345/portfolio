@@ -8,10 +8,10 @@ const Hero = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const titles = [
-    "Full Stack Web Developer",
+    "Cloud & Full Stack Developer",
+    "AWS Solutions Architect Learner",
+    "AWS Cloud Enthusiast",
     "MERN Stack Developer",
-    "Google Cloud Certified",
-    "AI/ML Enthusiast",
   ];
 
   const currentTitle = titles[Math.floor(currentIndex / 50) % titles.length];
@@ -62,7 +62,7 @@ const Hero = () => {
               <span className="text-cyan-300 font-extrabold drop-shadow-2xl">
                 Arpita Raj
               </span>{" "}
-              👩‍💻
+              👋
             </h1>
 
             {/* Typewriter Effect */}
@@ -75,9 +75,10 @@ const Hero = () => {
 
             {/* Subtitle */}
             <p className="text-xl md:text-2xl text-blue-100 font-medium max-w-4xl mx-auto leading-relaxed">
-              Passionate about creating innovative web solutions with modern
-              technologies. Certified in Google Cloud with expertise in AI/ML
-              and full-stack development.
+              Building scalable web applications and cloud solutions with the
+              MERN Stack, AWS, and Google Cloud. Hands-on experience deploying
+              applications and working with AWS services including EC2, S3, IAM,
+              VPC, Route 53, CloudFront, and CloudWatch.
             </p>
           </div>
 
@@ -104,20 +105,20 @@ const Hero = () => {
             <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
               <div className="text-3xl font-bold text-white mb-2">18+</div>
               <div className="text-indigo-200 font-medium">
-                Google Cloud Badges
+                Google Cloud Skills Boost Badges
               </div>
             </div>
             <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
               <div className="text-3xl font-bold text-white mb-2">5+</div>
               <div className="text-indigo-200 font-medium">
-                Full Stack Projects
+                Projects Completed
               </div>
             </div>
             <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
-              <div className="text-3xl font-bold text-white mb-2">100%</div>
-              <div className="text-indigo-200 font-medium">
-                Passion for Tech
+              <div className="text-3xl font-bold text-white mb-2">
+                Cloud + MERN
               </div>
+              <div className="text-indigo-200 font-medium">Career Focus</div>
             </div>
           </div>
         </div>

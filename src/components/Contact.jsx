@@ -140,7 +140,7 @@ const Contact = () => {
                       Location
                     </h4>
                     <p className="text-gray-600 font-light">
-                      Patna, India
+                       Delhi, India
                     </p>
                     <p className="text-sm text-gray-500">
                       Open to remote opportunities
